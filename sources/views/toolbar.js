@@ -2,7 +2,7 @@ import {JetView} from "webix-jet";
 import NotificationPopup from "views/notifications";
 import SettingsPopup from "views/settings";
 import NewTaskPopup from "views/newtask";
-
+import NotesPopup from "./notes";
 export default class ToolbarView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
@@ -13,7 +13,7 @@ export default class ToolbarView extends JetView{
 			css:theme,
 			height:56,
 			elements:[
-				{ css:"logo", width:53, batch:"default" },
+				{  width:53, batch:"default" },
 				{
 					paddingY:5,
 					rows:[
@@ -35,6 +35,15 @@ export default class ToolbarView extends JetView{
 									inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()
+								},
+								{
+									view:"button",
+									type:"form",
+									label:_("Daily notes"),
+									autowidth:true,
+									inputHeight:40,
+									batch:"default",
+									click:() => this.notes.showWindow()
 								},
 								{ batch:"default" },
 								{
@@ -126,7 +135,7 @@ export default class ToolbarView extends JetView{
 		this.notifications = this.ui(NotificationPopup);
 		this.settings = this.ui(SettingsPopup);
 		this.newtask = this.ui(NewTaskPopup);
-
+		this.notes = this.ui(NotesPopup);
 		this.on(this.app,"read:notifications",() => {
 			this.$$("bell").config.badge = 0;
 			this.$$("bell").refresh();

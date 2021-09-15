@@ -34,7 +34,7 @@ export default {
 	"incomplete":"불완전한",
 	"Tasks":"할 일 목록",
 	"Meeting":"모임",
-	"Mail":"우편",
+	"Training":"우편",
 	"Calls":"전화",
 	"Button text on mobile devices":"휴대 기기의 버튼 텍스트",
 	"Search pattern is ambiguous":"검색 패턴이 모호합니다",

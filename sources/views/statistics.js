@@ -12,6 +12,7 @@ export default class StatisticsView extends JetView{
 					view:"chart",
 					type:"scatter",
 					height:300,
+					width: 10,
 					xValue:"#week#",
 					padding:{
 						top:4, bottom:44
@@ -29,7 +30,7 @@ export default class StatisticsView extends JetView{
 							{ text:new Date().getFullYear(), color:"#1CA1C1" }
 						],
 						align:"right", layout:"x", valign:"bottom",
-						margin:4, padding:10,
+						margin:6, padding:10,
 						marker:{
 							type:"round", width:7, height:8
 						}

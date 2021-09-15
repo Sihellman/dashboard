@@ -34,7 +34,7 @@ export default {
 	"incomplete":"incomplete",
 	"Tasks":"Tasks",
 	"Meeting":"Meeting",
-	"Mail":"Mail",
+	"Training":"Training",
 	"Calls":"Calls",
 	"Button text on mobile devices":"Button text on mobile devices",
 	"Search pattern is ambiguous":"Search pattern is ambiguous",

@@ -62,7 +62,9 @@ module.exports = function(env) {
 			})
 		],
 		devServer:{
-			stats:"errors-only"
+			stats:"errors-only",
+			compress: true,
+    disableHostCheck: true,
 		}
 	};
 

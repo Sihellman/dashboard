@@ -5,10 +5,10 @@ export default class TimeView extends JetView {
 		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean",
-			width:410,
+			width:470,
 			height:300,
 			rows:[
-				{ template:_("Hours spent, %"), type:"header", css:"chart_header" },
+				{ template:_("Hours spent %"), type:"header", css:"chart_header" },
 				{
 					localId:"hours",
 					view:"chart",

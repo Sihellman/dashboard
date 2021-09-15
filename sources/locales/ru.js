@@ -34,7 +34,7 @@ export default {
 	"incomplete":"незавершено",
 	"Tasks":"Задачи",
 	"Meeting":"Митинги",
-	"Mail":"Почта",
+	"Training":"Почта",
 	"Calls":"Звонки",
 	"Button text on mobile devices":"Текст на кнопке на мобильных устройствах",
 	"Search pattern is ambiguous":"Неясный алгоритм поиска",

@@ -1,10 +1,12 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import {JetView} from "webix-jet";
 import PersonsView from "views/persons";
 import StatisticsView from "views/statistics";
 import TimeView from "views/time";
 import ProgressView from "views/progress";
 import TasksView from "views/tasks";
-import CompareView from "views/compare";
+import TrainingView from "./training";
+import AttendenceView from "./attendence";
 
 export default class DashboardView extends JetView{
 	config(){
@@ -27,16 +29,36 @@ export default class DashboardView extends JetView{
 										type:"wide",
 										responsive:"time-and-progress-layout",
 										cols:[
-											TimeView, ProgressView
+											 ProgressView
 										]
 									}
 								]
 							},
 							{
-								height:300,
-								type:"wide",
+								
 								cols:[
-									TasksView, CompareView
+									TimeView,{
+										height:300,
+										width: 15,
+									},
+									TrainingView,{
+										height:300,
+										width: 15,
+									},
+									AttendenceView,{
+										height:300,
+										width: 15,
+									}
+								]
+							},
+
+							{
+								
+								cols:[
+									TasksView,{
+										height:300,
+										width: 15,
+									}
 								]
 							}
 						]

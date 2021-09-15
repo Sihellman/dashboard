@@ -34,7 +34,7 @@ export default {
 	"incomplete":"incompleto",
 	"Tasks":"Tareas",
 	"Meeting":"Reunión",
-	"Mail":"Correo",
+	"Training":"Correo",
 	"Calls":"Llamadas",
 	"Button text on mobile devices":"Texto del botón en dispositivos móviles",
 	"Search pattern is ambiguous":"El patrón de búsqueda es ambiguo",

@@ -34,7 +34,7 @@ export default {
 	"incomplete":"残缺",
 	"Tasks":"任務",
 	"Meeting":"会议",
-	"Mail":"邮件",
+	"Training":"邮件",
 	"Calls":"呼叫",
 	"Button text on mobile devices":"移动设备上的按钮文字",
 	"Search pattern is ambiguous":"搜索模式含糊不清", 

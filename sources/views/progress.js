@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import {JetView} from "webix-jet";
 
 export default class ProgressView extends JetView {
@@ -6,6 +7,7 @@ export default class ProgressView extends JetView {
 		return {
 			type:"clean", //gravity:2,
 			minWidth:500,
+			width: 1095,
 			height:300,
 			rows:[
 				{ template:_("Individual employee's progress"), type:"header", css:"chart_header" },
@@ -13,7 +15,7 @@ export default class ProgressView extends JetView {
 					view:"chart",
 					border:true,
 					localId:"progress",
-					type:"splineArea",
+					type:"area",
 					value:"#tasks#",
 					color:"#1CA1C1",
 					borderWidth:2,
@@ -32,7 +34,25 @@ export default class ProgressView extends JetView {
 					},
 					padding:{
 						top:10
-					}
+					},
+					series:[
+						{
+						  alpha:0.7,
+						  value:"#tasks#",
+						  color: "#1CA1C1",
+						  tooltip:{
+								template:_("Week") + " #week#<br>#tasks# " + _("tasks completed")
+						  }
+						},
+						{
+						  alpha:0.5,
+						  value:"#bombs#",
+						  color:"#F8643F",
+						  tooltip:{
+								template:_("Week") + " #week#<br>#bombs# " + _("tasks overdue")
+						  }
+						}
+					  ],
 				}
 			]
 		};
@@ -49,7 +69,8 @@ export default class ProgressView extends JetView {
 		let chart = this.$$("progress");
 		chart.define("legend", {
 			values:[
-				{ text:name, color:"#1CA1C1" }
+				{ text:"tasks completed", color:"#1CA1C1" },
+				{ text:"tasks overdue", color:"#F8643F" }
 			],
 			align:"right", layout:"x", valign:"bottom", margin:4, padding:10,
 			marker:{

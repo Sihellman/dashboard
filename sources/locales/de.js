@@ -34,7 +34,7 @@ export default {
 	"incomplete":"unvollständig",
 	"Tasks":"Aufgaben",
 	"Meeting":"Treffen",
-	"Mail":"E-Mail",
+	"Training":"E-Training",
 	"Calls":"Anrufe",
 	"Button text on mobile devices":"Schaltflächentext auf mobilen Geräten",
 	"Search pattern is ambiguous":"Suchmuster ist mehrdeutig",
